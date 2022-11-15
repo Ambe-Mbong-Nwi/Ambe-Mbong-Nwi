@@ -1,0 +1,72 @@
+
+body{
+    position: relative;
+    background-color: skyblue;
+    width: 100%;
+}
+.pop{
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    top: 100px;
+    text-align: center;   /*aligning ninga too to center*/
+}
+.box{
+    position: absolute;
+    background-color: antiquewhite;
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+}
+.close{
+    position: absolute;
+    background-color: black;
+    width: 17px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    top: 3px;
+    left: 10px;
+}
+h1{
+    padding: 10px;
+}
+.p{
+    text-align: left;       /*overiding general text align*/
+    padding-left: 65px;
+    padding-bottom: 60px;
+}
+.pop input{
+    padding: 8px;
+    border-radius: 10px 0 0 10px;  /*top right bottom left*/
+
+}
+button{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin-left: -5px;      /*ie so it joins with the input box*/
+}
+
+/*POPUP ANIMATION STYLES*/
+.pop{
+    top: -300px;    /*ie off the page*/
+    /*animation: name duration timing-function delay iteration-count direction fill-mode(forwards--stay where u are at 100%); */
+    transform-origin: 3px 10px;     /*point at which the swing should occur ie around X point. default is center of box*/
+    animation: bounce 2s linear 0s forwards,
+               swing 2s ease 2s forwards;      /*delay 2s after the first animation*/
+}
+
+@keyframes bounce{
+    0%{opacity: 0}          /*invisible at begining*/
+    65%{transform: translateY(550px)}     /*600+(-300)=300px in page*/
+    100%{transform: translateY(510px); opacity:1}    /*bounces back up to the smaller distance*/
+}
+
+@keyframes swing{
+    0%{transform: translateY(510px) rotateZ(0deg)}   /*the transform property is written here so it shouldnt be overidden*/
+    45%{transform: translateY(510px) rotateZ(80deg)}
+    75%{transform: translateY(510px) rotateZ(60deg)}
+    100%{transform: translateY(510px) rotateZ(70deg)}
+}
