@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Ambe's Form</title>
+    <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body>
+    <h1 id='title'>Ambe's Registration Form</h1>
+    <p id='description'>This is my first project on freecodecamp. Please do well to fill the form</p>
+    <form id='survey-form'>
+      <fieldset>
+        <label for='name' id='name-label'>Enter your Name: <input id='name' name='name' type='text' required placeholder='type in name'></label>
+        <label for='email' id='email-label'>Enter your Email: <input id='email' name='email' type='email' required placeholder='type in email'></label>
+        <label for='number' id='number-label'>Enter your Phone Number: <input id='number' name='number' type='number' min='9' max='15' required placeholder='type in number'></label>
+      </fieldset>
+      <fieldset>
+        <p class='gen'>Please select your gender</p>
+        <label for='female'><input id='female' type='radio' name='gender' value='female'> Female</label>
+        <label for='male'><input id='male' type='radio' name='gender' value='male'> Male
+</label>
+        <label for='other'><input id='other' type='radio' name='gender' value='other'> Other  </label>
+      </fieldset>
+      <fieldset>
+        <label for='dropdown'> What is the name of ypur country?
+          <select id='dropdown' name='country'>
+            <option value=''>Select a country</option>
+            <option value='1'>Cameroon</option>
+            <option value='2'>Nigeria</option>
+            <option value='3'>Chad</option>
+            <option value='4'>Gabon</option>
+            <option value='5'>South Africa</option>
+            <option value='6'>Congo</option>
+          </select>
+          <p></p>
+        </label
+        <p>Choose the different African dishes you love</p>
+        <label for='achu'><input id='achu' name='achu' type='checkbox' value='achu'> Achu </label>
+        <label for='eru'><input id='eru' name='eru' type='checkbox' value='eru'> Garri and Eru </label>
+        <label for='yam'><input id='yam' name='yam' type='checkbox' value='yam'> Pounded Yam </label>
+        <label for='koki'><input id='koki' name='koki' type='checkbox' value='koki'> Koki </label>
+        <label for='fufu'><input id='fufu' name='fufu' type='checkbox' value='fufu'> Fufucorn and Vegetable </label>
+        <label for='garri'><input id='garri' name='garri' type='checkbox' value='garri'> Soaked Garri  </label>
+      </fieldset>
+      <fieldset>
+        <label for='comment'>Share your opinions on African cuisines.
+          <textarea id='comment' name='comment' rows='9' cols='40' placeholder='i love african dishes because...'></textarea></label>
+      </fieldset>
+      <input id='submit' type='submit' value='submit'>
+    </form>
+  </body>
+    
+</html>
