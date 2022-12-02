@@ -1,0 +1,129 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eeee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*menu base styles*/
+nav{
+    background: #333;
+}
+
+nav ul{
+    list-style-type: none;      /*so no default styles*/
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+   
+}
+
+nav a:hover{
+    background-color: #555;
+}
+
+/*social media base styles*/
+a.twit{
+    background: url(img/Twitter\ Icon_007bff.png) no-repeat center;
+    background-size: 80%;
+}
+
+a.face{
+    background: url(img/facebook.png) no-repeat center;
+    background-size: 80%;
+}
+
+.social a{
+    text-indent: -9000000px;      /*so writing shifts off page and u can see icon*/
+}
+
+.social{
+    max-width: 90px;
+}
+
+/*grid vs flex base styles*/
+/*note # is used for accessind id and . for class*/
+#blocks{
+    margin: 20px;
+}
+
+article{
+    box-sizing: border-box;/*so any padding is incorporated in the normal width instead of adding additional width*/
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+article h2{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/*flex styles*/
+
+nav ul.social{
+    display: flex;           /*so in small screens they are beside not on each other*/
+    flex:1 1 0;
+}
+
+nav ul.social li{            /*so when screen is smaller,and are displayed flex they still take up full width beside each other*/
+    flex: 1 1 0;
+}
+
+/*order changes the arrangment of boxes. default=0. least # is first to be displayed*/
+.one{
+    order: 0;
+}
+
+.two{
+    order: -1;
+}
+
+@media screen and (min-width: 765px){        /*media query for larger screens*/
+    nav ul{         /*flex container*/
+        display: flex;
+    }
+
+    nav li{
+        flex: 1 1 0;       /*grow, shrink, basis*/
+    }
+
+    nav a{
+        text-align: center;
+    }
+
+    nav{          /*set as flex container to easily manage groups of flex items in it*/
+        display: flex;
+        justify-content: space-between;          /*sending lists at two opposite ends*/
+    }
+
+    /*targetting the sections*/
+    #blocks{
+        display: flex;
+        flex-wrap: wrap;      /*ie wrap when u reach basis(min-width)*/
+        justify-content: space-between;  /*spread content to remainin 4%*/
+    }
+
+    article{
+        flex: 0 1 32%;          /*grow, shrink, basis*/
+        transition: flex-basis 0.2s linear;           /*animating when changing from stack to flex*/
+    }
+
+    article.stack{
+        flex: 0 1 100%;
+    }
+}

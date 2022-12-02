@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+        <title>Flex Menu</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href=''>HOME</a></li>
+                    <li><a href=''>ABOUT</a></li>
+                    <li><a href=''>CONTACT</a></li>
+                    <li><a href=''>STORE</a></li>
+                </ul>
+
+                <ul class="social">
+                    <li><a href='' class='twit'>Twitter</a></li>
+                    <li><a href='' class='face'>Facebook</a></li>
+                </ul>
+            </nav>
+
+            <!--user's design choice ie stack or grid-->
+            <div style="margin: 20px;">
+               <span>Layout: </span>
+               <a href='#' class='stack'>Stack</a>
+               <a href='#' class='grid'>Grid</a>
+            </div>
+            <section id="blocks">
+                <article class="one">
+                    <h2>Hello im Ambe read my life story</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ex atque et reiciendis fugit praesentium ipsum quaerat illo
+                    enim cupiditate? Omnis, porro? Enim sapiente, error hic labore 
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos
+                    laborum quidem quas! Molestiae.</p>
+                </article>
+                <article class="two">
+                    <h2>When was i born?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. D
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos
+                    possimus animi qui culpa!</p>
+                </article>
+                <article>
+                    <h2>Nursery and primary school</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error 
+                    saepe quisquam labore suscipit dolorem consectetur officiis tenetur
+                    nulla autem in exercitationem, natus blanditiis, adipisci quod
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos 
+                    optio. Qui quos voluptas ad.</p>
+                </article>
+                <article>
+                    <h2>UNIVERSITY here I come</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error 
+                    saepe quisquam labore suscipit dolorem consectetur officiis tenetur
+                    nulla autem in exercitationem, natus blanditiis, adipisci quod
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos 
+                    optio. Qui quos voluptas ad.</p>
+                </article>
+                <article>
+                    <h2>After Uni???</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error 
+                    saepe quisquam labore suscipit dolorem consectetur officiis tenetur
+                    nulla autem in exercitationem, natus blanditiis, adipisci quod
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos 
+                    optio. Qui quos voluptas ad.</p>
+                </article>
+                <article>
+                    <h2>Final Life. WOW......</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Maxime fugit facere, praesentium vitae iure placeat repudiandae 
+                    nostrum voluptate quisquam sapiente quaerat possimus? Sed labore
+                    ucimus neque deserunt velit tempora error quia assumenda distinctio
+                    laudantium autem ex aperiam, fugiat quis natus expedita dignissimos 
+                    fuga cum provident eaque totam in.</p>
+                </article>
+            </section>
+        </div>
+
+        <!--adding javascript for the layout functionality-->
+        <!--ie when u click the a tag with class stack, add class stack to the article-->
+        <!--for grid on click, remove the class stack-->
+        <script>
+            $("a.stack").on("click", function(){
+                $("article").addClass("stack");
+            });
+            $("a.grid").on("click", function(){
+                $("article").removeClass("stack");
+            });
+        </script>
+    </body>
+</html>
