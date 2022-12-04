@@ -1,0 +1,26 @@
+*{
+    font-size:20px;
+}
+h3{
+    font-style: italic;
+}
+h1, h2{
+    font-size: larger;
+}
+#main{
+    width: 1000px;
+    margin: 0 auto;
+}
+#image{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#img-caption{
+    font-style: italic;
+}
+footer > div{
+    text-align: center;
+    font-weight: bold;
+    
+}
