@@ -24,3 +24,7 @@ footer > div{
     font-weight: bold;
     
 }
+a:hover{
+    color: red;
+    padding-left: 10px;
+}
