@@ -1,0 +1,50 @@
+body, div, p{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+body{
+    background: hsl(212, 45%, 89%);
+    max-width: 375px;
+}
+
+div{
+    background-color: hsl(0, 0%, 100%);
+    max-width: 300px;
+    text-align: center;
+    box-sizing: border-box;  /*padding or extra area is included in 350px*/ 
+    padding: 15px;
+    border-radius: 15px;
+    position: absolute;     /*centerx div. 1-take it out of normal document flow*/
+    left: 50%;           /*2-set at 50% from left and top of page*/
+    top: 50%;
+    transform: translate(-50%, -50%);  /*3-ie move div 50% up and left from its currnt position hence center*/
+
+}
+
+img{
+    width: 100%;
+    display: block;
+    padding: 0px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+p{
+    font-size: 15px;
+    padding: 10px;
+}
+
+p.first{
+    font-weight: 700;
+    color: hsl(218, 44%, 22%);
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+
+p.last{
+    font-weight: 400;
+    color: hsl(220, 15%, 55%);
+    padding-bottom: 15px;
+}
