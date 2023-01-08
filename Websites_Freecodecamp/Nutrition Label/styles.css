@@ -8,7 +8,10 @@
   
   body {
     font-family: 'Open Sans', sans-serif;
-  }
+    min-height: 100vh;   /*centralising*/
+    display: grid;
+    place-content: center;
+   }
   
   .label {
     border: 2px solid black;
@@ -30,7 +33,7 @@
   .divider {
     border-bottom: 1px solid #888989;
     margin: 2px 0;
-    clear: right;
+    clear: right; /*clears the float property, pushing the divider and other content down below float text.*/
   }
   
   .bold {
@@ -38,7 +41,7 @@
   }
   
   .right {
-    float: right;
+    float: right; /*float places an element on right of container allowing other content to wrap around it*/
   }
   
   .lg {
@@ -55,12 +58,12 @@
   }
   
   .sm-text {
-    font-size: 0.85rem;
+    font-size: 0.85rem;  /*rem=root em => relative to font size of html*/
   }
   
   .calories-info h1 {
     margin: -5px -2px;
-    overflow: hidden;
+    overflow: hidden;  /*increases size so large number doesnt overflow*/
   }
   
   .calories-info span {
@@ -76,7 +79,7 @@
     margin-left: 2em;
   }
   
-  .daily-value p:not(.no-divider) {
+  .daily-value p:not(.no-divider) { /*ie don't select class no-divider*/
     border-bottom: 1px solid #888989;
   }
 

@@ -1,0 +1,85 @@
+/*5 types of positioning:static, fixed, relative, sticky and absolute.
+"static" is default ie what all elements have originally doesnt do anything
+with this, you CANNOT place any other element on top u need to change*/
+
+html {
+    box-sizing: border-box;
+  }
+  
+  /*::before selector creates a pseudo-element which is the first child of the selectedd element. ::after-last child*/
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  /*relative meaning we can move it relative to its original position and u can position
+  an absolute element inside.NB: the space it occupied becomes empty*/
+  #piano {
+    background-color: #00471b;
+    width: 992px;
+    height: 290px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px;
+    position: relative; 
+    border-radius: 10px;
+  }
+  
+  .keys {
+    background-color: #040404;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden;  /*hides any elements(extra keys) pushed outside the set width in cases with smaller screens*/
+  }
+  
+  .key {
+    background-color: #ffffff;
+    position: relative;
+    width: 41px;
+    height: 175px;
+    margin: 2px;
+    float: left;   /*makes all .key elements be displayed beside each other from right to*/
+    border-radius: 0 0 3px 3px;
+  }
+  
+  .key.black--key::after {   /*targets elements with class key and black--key and selects the pseudo-elements after these elements in the html*/
+    background-color: #1d1e22;
+    content: "";   /*used to overide content of elements. by default p-e are empty and not rendered to page, but '' ensures the p-e is empty but rendered to the page.*/
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  /*absolute positiioning. here u move an element but the space it occupied is NOT
+EMPTY bcos other elements shift and occupy the space.*/
+
+  .logo {
+    width: 200px;
+    position: absolute;
+    top: 23px;
+  }
+  
+  @media (max-width: 768px) {      /*style changes for smaller screen sizes ie below 768px*/
+    #piano {
+      width: 358px;
+    }
+  
+    .keys {
+      width: 318px;
+    }
+  
+    .logo {
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 769px) {
+    #piano{
+      width: 675px;
+    }
+  
+    .keys{
+      width: 633px;
+    }
+}
