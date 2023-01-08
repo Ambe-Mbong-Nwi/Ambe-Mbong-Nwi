@@ -2,7 +2,7 @@
 - I'm a computer Engineer student 
 - 👀 I’m interested in front end web design
 - 🌱 I’m currently learning html, css and javascript
-- checkout some of my work and make contributions
+- Checkout my other web accounts: [Frontend Mentor](https://www.frontendmentor.io/profile/Ambe-Mbong-Nwi), [FreeCodeCamp](https://www.freecodecamp.org/Ambe_Mbong)
 - 📫 How to reach me ambembongnwinchang@gmail.com
 
 <!---
