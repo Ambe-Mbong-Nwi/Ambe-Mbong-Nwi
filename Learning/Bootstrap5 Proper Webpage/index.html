@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>First Proper Bootstrap</title>
+</head>
+<body>
+    <!--    NAVBAR    -->
+    <!--navbar-normal class, navbar-expand-lg - for responsive navbar ie at large show full navbar length else show 3 lines. check breakpoints under layout-->
+    <!--bg- background color, navbar-dark - makes color white since navbar is already dark-->
+    <!--container class provides authomatic padding -->
+    <!--navbar-brand using an anchor tag is for all elements on the navbar-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top"> <!--py - padding on y-axis-->
+    <div class="container">
+        <a href="#" class="navbar-brand">Frontend Bootcamp</a>
+
+        <!--toggle button when screen is small. the target is the id of the navbar class-->
+        <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navmenu"
+        >
+            <span class="navbar-toggler-icon"></span> <!--adding 3-line icon for small screens-->
+    
+    </button>
+
+        <div class="collapse navbar-collapse" id="navmenu"> <!--so it collapses on smaller screens-->
+            <ul class="navbar-nav ms-auto">   <!--to style navbar list, margin-start to send list to right-->
+                <li class="nav-item">    <!--to style each navbar list item-->
+                    <a href="#learn" class="nav-link">What You'll Learn</a>    <!--to style each navbar list item link-->
+                </li>
+                <li class="nav-item">    <!--to style each navbar list item-->
+                    <a href="#questions" class="nav-link">Questions</a>    <!--to style each navbar list item link-->
+                </li>
+                <li class="nav-item">    <!--to style each navbar list item-->
+                    <a href="#instructors" class="nav-link">Instructors</a>    <!--to style each navbar list item link-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--    SHOWCASE   FLEX -->
+<!--dark background, light text, p(padding around OR pt(ptop), pb, px, py nmbers 1-5), except small screen text should be aligned not centered-->
+<!--img-fluid so img remains in its container, w-50 makes image half its original size-->
+<!--aligning items center works on flex box(y-axis), justify-content-between(x-axis) -->
+<!--d-none d-sm-block  -  on small screen, display none -->
+<!--p lead class is to increase font-size, my(margin-y ie top and bottom)-->
+<!--button light blue(info) and large(lg)-->
+<section class="bg-dark text-light p-5 text-center text-sm-start">
+
+    <div class="container"> <!--for the extra padding without affectinf our background-->
+        <div class="d-sm-flex align-items-center justify-content-between">   <!--using flexbox to align these items, sm so no flex on small screens-->
+            <div>
+                <h1> Wow! 
+                    <span class="text-info">  <!--changes color to blue. check documentation-->
+                    Learning never ends
+                    </span>
+                </h1>
+
+                <p class="lead my-5">I know right. We are all encouraged to learn whenever we find the opportunity.
+                Join us now to make the world a better place!!!</p>
+
+                <button type="button" class="btn btn-info btn-lg">Shall We Begin</button>
+
+            </div>
+            <img class="img-fluid w-50 d-none d-sm-block" src="img/showcase.svg" alt="girl using a laptop">
+        </div>
+    </div>
+</section>
+
+<!--    NEWSLETTER  FLEX -->
+<section class="bg-success text-light p-5">
+    <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <h3 class="mb-3 mb-md-0"> Sign up for Our Newsletter</h3>
+
+            <!--under forms and input group. news-input is my customised class in styles-->
+            <div class="input-group news-input">
+                <input type="text" 
+                class="form-control" 
+                placeholder="Enter email"
+                >
+                <button class="btn btn-dark btn-lg" type="button">Button</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    BOXES   GRID -->
+<!--Grid - use(row on the container), col-md(medium screens and above only)-->
+<!-- i class= icon, bi = bootstrap icon etc. to make icon larger, place in a div with .h1 class-->
+<div class="section p-5">
+    <div class="container">
+        <div class="row text-center g-5">  <!--g = gap around. or gx, gy-->
+
+            <div class="col-md">
+                <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                        <div class="h1">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h3 class="class-title mb-3">Virtual</h3>
+                        <p class="class-text">You can pay us using virtual cards which is fast and efficient like other methods. Afterall it's IT world.</p>
+                        <a href="#" class="btn btn-info">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                        <div class="h1">
+                            <i class="bi bi-person-square"></i>
+                        </div>
+                        <h3 class="class-title mb-3">Hybrid</h3>
+                        <p class="class-text">You can pay us using virtual cards which is fast and efficient like other methods. Afterall it's IT world.</p>
+                        <a href="#" class="btn btn-info">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                        <div class="h1">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h3 class="class-title mb-3">In Person</h3>
+                        <p class="class-text">You can pay us using virtual cards which is fast and efficient like other methods. Afterall it's IT world.</p>
+                        <a href="#" class="btn btn-info">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--    FUNDAMENTALS    GRID-->
+<section id="learn" class="p-5">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md">
+                <img class="image-fluid w-75" src="img/fundamentals.svg" alt="css pic">
+            </div>
+            <div class="col-md p-5">
+                <h2>Learn the fundamentals</h2>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia facilis quod nihil quam ab?</p>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eveniet.</p>
+                <a href="#" class="btn btn-light mt-3 btn-lg">
+                    <i class="bi bi-chevron-right">Read More</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    FUNDAMENTALS    GRID-->
+<section id="learn" class="p-5 bg-dark text-light" >
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+           
+            <div class="col-md p-5">
+                <h2>Learn React</h2>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia facilis quod nihil quam ab?</p>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eveniet.</p>
+                <a href="#" class="btn btn-light mt-3 btn-lg">
+                    <i class="bi bi-chevron-right">Read More</i>
+                </a>
+            </div>
+
+            <div class="col-md">
+                <img class="image-fluid w-75" src="img/react.svg" alt="css pic">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--     QUESTIONS    ACCORDION -->
+<!--for every item, the target in the button should match the id its corresponding div-->
+<section id="questions" class="p-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion accordion-flush" id="questions">
+
+            <!--question 1-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Have you built a wepage before?
+                </button>
+              </h2>
+              <div id="question-one" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad nihil officiis obcaecati earum, cupiditate dolor?</div>
+              </div>
+            </div>
+
+            <!--question 2-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  What inspired you to check out this website?
+                </button>
+              </h2>
+              <div id="question-two" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dicta inventore et ipsa! Repellat, ea?</div>
+              </div>
+            </div>
+
+            <!--question 3-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three" aria-expanded="false" aria-controls="flush-collapseThree">
+                  How much does it cost?
+                </button>
+              </h2>
+              <div id="question-three" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquid voluptatum qui. Iste, quis voluptatem.<code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+
+            <!--question 4-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four" aria-expanded="false" aria-controls="flush-collapseFour">
+                    How can i get started?
+                  </button>
+                </h2>
+                <div id="question-four" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquid voluptatum qui. Iste, quis voluptatem.<code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+              </div>
+
+          </div>
+    </div>
+</section>
+
+<!--    INSTRUCTORS     GRID-->
+<!-- col=md-6: ie 12 colums exist. so from medium screens, share screen into 2 colums-->
+<!--for large screens, eachside has 3columns. 12/3 = 4columns displayed-->
+<div class="section p-5 bg-dark" id="instructors">
+    <div class="container">
+        <h2 class="text-center text-white">Meet Our Instructors</h2>
+        <p class="text-center lead text-white mb-5">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, optio magnam quod dolores soluta ab explicabo rem adipisci sit repudiandae?
+        </p>
+
+        <div class="row g-4">
+       
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                   <div class="card-body text-center">
+                    <img class="rounded-circle mb-3 img-fluid w-50 tree" src="img/abong.jpg" alt="">
+                    <h3 class="card-title mb-3">Abong</h3>
+                    <p class="class-text">Lorem ipsum dolor adipisicing elit. Deserunt porro adipisci doloribus unde iste? Animi.</p>
+                    <a href="https://github.com/Ambe-Mbong-Nwi"><i class="bi bi-github text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                   </div> 
+                </div>
+            </div>
+      
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                   <div class="card-body text-center">
+                    <img class="rounded-circle mb-3 img-fluid w-50" src="img/mama.jpg" alt="">
+                    <h3 class="card-title mb-3">Mama</h3>
+                    <p class="class-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt porro adipisci doloribusamet consectetur adipisicing elit. Deserunt porro adipisci doloribus unde iste? Animi.</p>
+                    <a href="https://github.com/Ambe-Mbong-Nwi"><i class="bi bi-github text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                   </div> 
+                </div>
+            </div>
+        
+
+       
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                   <div class="card-body text-center">
+                    <img class="rounded-circle mb-3 img-fluid w-50" src="img/baby.jpg" alt="">
+                    <h3 class="card-title mb-3">Baby</h3>
+                    <p class="class-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt porro adipisci doloribus unde iste? Animi.</p>
+                    <a href="https://github.com/Ambe-Mbong-Nwi"><i class="bi bi-github text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                   </div> 
+                </div>
+            </div>
+        
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                   <div class="card-body text-center">
+                    <img class="rounded-circle mb-3 w-50 img-fluid" src="img/zee.jpg" alt="">
+                    <h3 class="card-title mb-3">Zee</h3>
+                    <p class="class-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt porro adipisci doloribus unde iste? Animi.</p>
+                    <a href="https://github.com/Ambe-Mbong-Nwi"><i class="bi bi-github text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                   </div> 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

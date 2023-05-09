@@ -1,0 +1,13 @@
+/*so even though navbar is fixed, space still exists before icon*/
+body::before{
+    display: block;
+    content: '';
+    height: 50px;
+}
+
+/*on medium screens and above, make size of placeholder half its width now*/
+@media(min-width: 768px){
+    .news-input{
+        width: 50%;
+    }
+}
